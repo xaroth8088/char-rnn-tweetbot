@@ -6,7 +6,7 @@ import os
 def main():
     # Get tweet text
     with os.popen(
-        "python sample.py --data_dir data/checkpoint-to-tweet-from --temperature 0.25 --sample_len 1000 | sed '2q;d'"
+        "python sample.py --data_dir data/checkpoint-to-tweet-from --temperature 0.25 --sample_len 1000 | sed -E 's/[\\r\\n]+/\\n/g' | sed '2q;d'"
     ) as stream:
         output = stream.read()
 
