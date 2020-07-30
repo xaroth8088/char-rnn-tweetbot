@@ -9,6 +9,6 @@ RUN rm -rf data/shakespeare
 
 # Layer this repo on top and set it up
 COPY . .
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "__main__.py"]
