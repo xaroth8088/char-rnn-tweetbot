@@ -1,2 +1,2 @@
 tweepy==4.5.0
-tensorflow==2.2.1
+tensorflow==2.11.1
